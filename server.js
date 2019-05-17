@@ -13,15 +13,16 @@ const sendUserError = (msg, res) => {
 };
 
 let games = [
-  {
-    title: 'Pacman',
-    genre: "Arcade"
-  }
+  // {
+  //   title: 'Pacman',
+  //   genre: "Arcade"
+  // }
 ];
+
 server.get('/games', (req, res) => {
   res.json(games);
 });
-let smurfId = 0;
+
 
 server.post('/games', (req, res) => {
   const { title, genre } = req.body;
