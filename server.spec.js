@@ -22,9 +22,7 @@ describe('server.js', () => {
             expect(response.body).toStrictEqual([])
         })
 
-        it('', () => {
-            
-        })
+     
     })
 
     describe('Post endpoint /games', () => {
@@ -48,12 +46,12 @@ describe('server.js', () => {
             
         })
 
-        it('', () => {
-            
+        it('returns a json when successful', async () => {
+            let response = await request(server).get('/games')
+            // console.log(response.headers)
+            expect(response.headers["content-type"]).toMatch(/json/i)
         })
 
-        it('', () => {
-            
-        })
+      
     })
 })
